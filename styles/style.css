@@ -2,4 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+
+:root{
+    --primary-color: #0a9c6f;
+    --grey900: #0d1919;
+    --grey700: #1f2c34;
+    --grey300: #fefff6;
+    --grey200: #f1f2f6;
+    --green-button: #138b80;
+    --green300: #2dca7a;
+    --green100: #dcf8c6;
+
+    --primary-font: "Roboto", sans-serif;
 }
