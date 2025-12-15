@@ -31,6 +31,8 @@ body{
     overflow: hidden;
 }
 
+/*aside styles*/
+
 aside{
     background-color: var(--grey900);
     color: white;
@@ -86,4 +88,55 @@ aside header{
 .actions button:hover{
     background-color: var(--grey700);
     transform: translateY(-4px);
+}
+
+/*search input*/
+
+.search {
+    background-color: var(--grey800);
+    padding: 10px;
+}
+
+.search form input{
+    background-color: var(--grey700);
+    width: 100%;
+    display: block;
+    border: none;
+    padding:10px;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+}
+
+
+.search input:focus{
+    outline: 1px solid var(--grey700);
+}
+
+
+.chats ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.user-chat{
+    background-color: var(--grey900);
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-chat img {
+    border-radius: 50%;
+    width: 60px;
+}
+
+.user-chat:hover{
+    background-color: var(--grey700);
+    cursor: pointer;
+    border-left: 3px solid var(--green300);
 }
