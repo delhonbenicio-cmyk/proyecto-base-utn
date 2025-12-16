@@ -26,6 +26,8 @@ body{
 }
 
 .app{
+    max-width: 1100vh;
+    margin: auto;
     background-color: white;
     display: grid;
     grid-template-columns: 350px 1fr;
