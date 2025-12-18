@@ -18,6 +18,8 @@
     --green300: #2dca7a;
     --green100: #dcf8c6;
     --primary-font: "Roboto", sans-serif;
+    --colorNuevo: #f0f2f5;
+    --colorTickWhatsapp: #53bdeb;
 }
 
 body{
@@ -40,7 +42,7 @@ body{
 /*aside styles*/
 
 aside{
-    background-color: var(--grey900);
+    background-color: var(--grey600);
     color: white;
 }
 
@@ -60,13 +62,14 @@ aside header{
     gap: 10px;
 }
 
-.profile svg{
+.profile img{
     width: 60px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .profile h2{
-    font-size: 22px
+    font-size: 20px
 }
 
 .actions{
@@ -131,6 +134,16 @@ aside header{
     gap: 10px;
 }
 
+.user-chat div{
+    flex: 1;
+}
+
+.user-chat .check{
+    width: 18px;
+    height: 18px;
+    color: var(--colorTickWhatsapp);
+}
+
 .user-chat img {
     border-radius: 50%;
     width: 50px;
@@ -177,25 +190,60 @@ aside header{
     gap: 20px;
     overflow-y: auto;
 }
-
-.message{
-    background-color: var(--grey300);
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.238);
-    padding: 10px;
-    width: 60%;
+.message .date {
+    font-size: 12px;
+    color: #667781;
+    align-self: flex-end;
 }
 
-.message .time{
+.message{
+    padding: 8px 10px;
+    border-radius: 18px;
+    max-width: 60%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    word-wrap: break-word;
+}
+
+.message-check{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
     color: var(--grey700);
+}
+
+.message-check .time{
     font-size: 14px;
-    margin-top: 10px;
-    text-align: end;
 }
 
 .me{
-    align-self: end;
+    align-self: flex-end;
     background-color: var(--green100);
+}
+
+.message.me {
+    border-top-right-radius: 4px;
+}
+
+.message.you {
+    align-self: flex-start;
+    background-color: #ffffff;
+    border-top-left-radius: 4px;
+}
+
+.aside-messages LI{
+    background-color: var(--grey600);
+}
+
+.message-content {
+    font-size: 17px;
+    line-height: 1.35;
+    color: #111;
 }
 
 /*footer styles*/
@@ -280,11 +328,16 @@ footer .send:hover{
 
 @media (max-width: 880px) {
     aside{
-    display: none;
-}
+        display: none;
+    }
 
-.app{
-    grid-template-columns: 1fr;
+    .app{
+        grid-template-columns: 1fr;
+    }
 }
-
+/*checks*/
+.message-check .check{
+    width: 20px;
+    height: 20px;
+    color: #4fc3f7
 }
